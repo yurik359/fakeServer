@@ -3,7 +3,7 @@ const { TicketData } = require("../models/tickedData");
 module.exports = {
   sendTicketData: async (req, res) => {
     try {
-      const {ticketId }= req.query
+      const {ticketId} = req.query
 console.log(ticketId)
       
 
@@ -15,5 +15,14 @@ console.log(ticketId)
       console.log(error);
     }
   },
+  postTicket: async (req,res) => {
+    try {
+        const lol = req.body
+        console.log(lol)
+        res.send(lol)
+    } catch (error) {
+        console.log(error)
+    }
+  } 
 };
 
